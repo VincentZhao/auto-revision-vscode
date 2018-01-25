@@ -1,0 +1,61 @@
+{
+    "name": "auto-revision",
+    "displayName": "auto-revision",
+    "description": "Generate revisions, like magic.",
+    "version": "0.0.1",
+    "publisher": "auto-revision",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.autoRevision"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.autoRevision",
+                "title": "AutoRevision 自动版本履历"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "AutoRevision configuration",
+            "properties": {
+                "autoRevision.signature": {
+                    "type": "string",
+                    "default": "Jhon Doe(NCIT)",
+                    "description": "Signature to be shown in the revision."
+                },
+                "autoRevision.message": {
+                    "type": "string",
+                    "default": "V1.1 対応",
+                    "description": "Revision message."
+                }
+            }
+        },
+        "keybindings":[
+            {
+                "command": "extension.autoRevision",
+                "key": "ctrl+alt+w",
+                "mac": "cmd+alt+w"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
