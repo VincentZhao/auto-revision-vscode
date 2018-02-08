@@ -2,7 +2,7 @@
     "name": "auto-revision",
     "displayName": "auto-revision",
     "description": "Generate revisions, like magic.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "Vincent-Zhao",
     "engines": {
         "vscode": "^1.19.0"

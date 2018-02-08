@@ -132,7 +132,7 @@ class JsRevision extends Revision {
             let lineNo = this.latestRevisionRow()
             for (let i = 1; i <= 10; i++) {
                 let line = this.editor.document.lineAt(lineNo + i).text
-                if (/^#\s\*\s\={5,}$/.test(line)) {
+                if (/^\s\*\s\={5,}$/.test(line)) {
                     return new Position(lineNo + i, 0)
                 }
             }
