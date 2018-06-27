@@ -111,8 +111,7 @@ class RubyRevision extends Revision {
     }
 
     defaultRevision() {
-        let result = `# encoding: UTF-8
-#
+        let result = `#
 # (c) ${this.thisYear()} Azbil Corporation All Rights Reserved.
 #
 # ORIGINAL SOURCE INFORMATION
